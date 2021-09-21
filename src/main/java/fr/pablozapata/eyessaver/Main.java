@@ -59,6 +59,7 @@ public class Main {
         PopupMenu popup = new PopupMenu();
         popup.add("Activer / Désactiver");
         popup.add("Définir l'intervalle");
+        popup.add("Quitter");
         popup.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,6 +71,8 @@ public class Main {
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
+                } else if (e.getActionCommand().equalsIgnoreCase("Quitter")) {
+                    System.exit(0);
                 }
             }
         });
